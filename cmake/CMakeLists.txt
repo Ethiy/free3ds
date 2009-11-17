@@ -19,8 +19,9 @@ set(PACKAGE_TARNAME "Lib3DS")
 set(PACKAGE_VERSION "1.0")
 set(VERSION "1.0")
 
-# Systematically copy the Matis macros in the cmake modules
-file (COPY ../../cmake/MatisMacros.cmake ../../cmake/MatisConfig.cmake.in DESTINATION ${CMAKE_ROOT}/Modules)
+# Systematicaly copy the Matis macros in the cmake modules
+configure_file (../../cmake/MatisMacros.cmake ${CMAKE_ROOT}/Modules/MatisMacros.cmake COPYONLY)
+configure_file (../../cmake/MatisConfig.cmake.in ${CMAKE_ROOT}/Modules/MatisConfig.cmake.in COPYONLY)
 include( MatisMacros )
 
 __common_project(Lib3DS)
