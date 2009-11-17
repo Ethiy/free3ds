@@ -21,4 +21,4 @@ set(VERSION "1.0")
 
 include(${PROJECT_SOURCE_DIR}/../../cmake/CommonMacros.cmake)
 
-__common_project(Lib3DS ${SELF_DIR})
+__common_project(Lib3DS)
