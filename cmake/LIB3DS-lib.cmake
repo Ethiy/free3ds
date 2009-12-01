@@ -54,7 +54,11 @@ __global_append(lib3ds_HEADERS lib3ds_FULL_HEADERS "${LIB3DS_ROOT_DIR}/lib3ds/")
 set(lib3ds_DEFINITIONS "")
 set(lib3ds_DEPENDENCIES "")
 
+
 __add_library (lib3ds lib3ds_FULL_SRCS lib3ds_FULL_HEADERS lib3ds_DEFINITIONS lib3ds_DEPENDENCIES)
+if(UNIX)
+	target_link_libraries(lib3ds m)
+endif(UNIX)
 
 IF(WIN32 AND MSVC AND BUILD_SHARED_LIBS)
 	SET_PROPERTY(TARGET lib3ds APPEND PROPERTY DEFINE_SYMBOL LIB3DS_EXPORTS)
