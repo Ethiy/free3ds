@@ -57,6 +57,8 @@ set(lib3ds_DEPENDENCIES "")
 
 __add_library (lib3ds lib3ds_FULL_SRCS lib3ds_FULL_HEADERS lib3ds_DEFINITIONS lib3ds_DEPENDENCIES)
 if(UNIX)
+	set_target_properties(lib3ds PROPERTIES PREFIX "")
+	set_target_properties(lib3ds PROPERTIES IMPORT_PREFIX "")
 	target_link_libraries(lib3ds m)
 endif(UNIX)
 
