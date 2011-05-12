@@ -3,7 +3,7 @@
 # date: 23/10/2009
 
 # define source and header files and directories
-set(lib3ds_SRCS
+set(Lib3DS_SRCS
 atmosphere.c
 background.c
 camera.c
@@ -23,9 +23,9 @@ tracks.c
 vector.c
 viewport.c
 )
-__global_append(lib3ds_SRCS lib3ds_FULL_SRCS "${LIB3DS_ROOT_DIR}/lib3ds/")
+__global_append(Lib3DS_SRCS Lib3DS_FULL_SRCS "${Lib3DS_ROOT_DIR}/lib3ds/")
 
-include_directories(${LIB3DS_ROOT_DIR})
+include_directories(${Lib3DS_ROOT_DIR})
 set(lib3ds_HEADERS
 atmosphere.h
 background.h
@@ -48,22 +48,22 @@ types.h
 vector.h
 viewport.h
 )
-__global_append(lib3ds_HEADERS lib3ds_FULL_HEADERS "${LIB3DS_ROOT_DIR}/lib3ds/")
+__global_append(Lib3DS_HEADERS Lib3DS_FULL_HEADERS "${Lib3DS_ROOT_DIR}/lib3ds/")
 
 # set definitions and dependencies
-set(lib3ds_DEFINITIONS "")
-set(lib3ds_DEPENDENCIES "")
+set(Lib3DS_DEFINITIONS "")
+set(Lib3DS_DEPENDENCIES "")
 
 
-__add_library (lib3ds lib3ds_FULL_SRCS lib3ds_FULL_HEADERS lib3ds_DEFINITIONS lib3ds_DEPENDENCIES)
+__add_library (Lib3DS Lib3DS_FULL_SRCS Lib3DS_FULL_HEADERS Lib3DS_DEFINITIONS Lib3DS_DEPENDENCIES)
 if(UNIX)
-	set_target_properties(lib3ds PROPERTIES PREFIX "")
-	set_target_properties(lib3ds PROPERTIES IMPORT_PREFIX "")
-	target_link_libraries(lib3ds m)
+	set_target_properties(Lib3DS PROPERTIES PREFIX "")
+	set_target_properties(Lib3DS PROPERTIES IMPORT_PREFIX "")
+	target_link_libraries(Lib3DS m)
 endif(UNIX)
 
 IF(WIN32 AND MSVC AND BUILD_SHARED_LIBS)
-	SET_PROPERTY(TARGET lib3ds APPEND PROPERTY DEFINE_SYMBOL LIB3DS_EXPORTS)
+	SET_PROPERTY(TARGET Lib3DS APPEND PROPERTY DEFINE_SYMBOL LIB3DS_EXPORTS)
 ENDIF(WIN32 AND MSVC AND BUILD_SHARED_LIBS)
 
 
