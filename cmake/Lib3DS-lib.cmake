@@ -60,6 +60,8 @@ endif(UNIX)
 
 __add_library (${Lib3DS_NAME} Lib3DS_FULL_SRCS Lib3DS_FULL_HEADERS Lib3DS_DEFINITIONS Lib3DS_DEPENDENCIES)
 if(UNIX)
+	#set_target_properties(Lib3DS PROPERTIES PREFIX "")
+	#set_target_properties(Lib3DS PROPERTIES IMPORT_PREFIX "")
 	target_link_libraries(${Lib3DS_NAME} m)
 endif(UNIX)
 
