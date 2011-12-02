@@ -19,6 +19,13 @@ set(PACKAGE_TARNAME "Lib3DS")
 set(PACKAGE_VERSION "1.0")
 set(VERSION "1.0")
 
-include(../../cmake/MatisMacros.cmake)
+find_path(MATIS_MACROS_ROOT NAMES MatisMacros.cmake
+	PATHS . .. ../.. ../../..
+	PATH_SUFFIXES cmake extern/cmake extern/trunk/cmake
+)
+if(NOT MATIS_MACROS_ROOT)
+	message(FATAL_ERROR "Could not find MatisMacros.cmake, please define MATIS_MACROS_ROOT to the directory containing MatisMacros.cmake")
+endif(NOT MATIS_MACROS_ROOT)
+include(${MATIS_MACROS_ROOT}/MatisMacros.cmake)
 
 __matis_extern_project()
