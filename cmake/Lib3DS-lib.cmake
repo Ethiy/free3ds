@@ -24,9 +24,10 @@ vector.c
 viewport.c
 )
 __global_append(Lib3DS_SRCS Lib3DS_FULL_SRCS "${Lib3DS_ROOT_DIR}/lib3ds/")
+message(STATUS "[lib] Lib3DS_FULL_HEADERS=${Lib3DS_FULL_HEADERS}")
 
 include_directories(${Lib3DS_ROOT_DIR})
-set(lib3ds_HEADERS
+set(Lib3DS_HEADERS
 atmosphere.h
 background.h
 camera.h

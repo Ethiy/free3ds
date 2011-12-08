@@ -16,8 +16,8 @@ set(PACKAGE "Lib3DS")
 set(PACKAGE_NAME "3DS Library v1.7")
 set(PACKAGE_STRING ".3ds objects handling library")
 set(PACKAGE_TARNAME "Lib3DS")
-set(PACKAGE_VERSION "1.0")
-set(VERSION "1.0")
+set(PACKAGE_VERSION "1.7")
+set(VERSION "1.7")
 
 find_path(MATIS_MACROS_ROOT NAMES MatisMacros.cmake
 	PATHS . .. ../.. ../../..
