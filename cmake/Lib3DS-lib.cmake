@@ -55,7 +55,7 @@ set(Lib3DS_DEFINITIONS "")
 set(Lib3DS_DEPENDENCIES "")
 set(Lib3DS_NAME "Lib3DS")
 if(UNIX)
-  set(Lib3DS_NAME "3DS")
+  set(Lib3DS_NAME "lib3ds")
 endif(UNIX)
 
 __add_library (${Lib3DS_NAME} Lib3DS_FULL_SRCS Lib3DS_FULL_HEADERS Lib3DS_DEFINITIONS Lib3DS_DEPENDENCIES)
