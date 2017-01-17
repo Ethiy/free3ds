@@ -17,7 +17,7 @@ include(cmake/dependencies.cmake)
 
 # Lib3ds
 file(GLOB_RECURSE Lib3DS_SRCS "${Lib3DS_SOURCE_DIR}/src/lib/*.c")
-file(GLOB_RECURSE Lib3DS_HEADERS "${Lib3DS_SOURCE_DIR}/src/lib/lib3ds.h")
+file(GLOB_RECURSE Lib3DS_HEADERS "${Lib3DS_SOURCE_DIR}/src/lib/*.h")
 
 add_library(3ds SHARED ${Lib3DS_SRCS} ${Lib3DS_HEADERS})
 
