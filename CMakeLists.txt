@@ -23,7 +23,6 @@ add_library(free3ds SHARED ${Free3DS_SRCS} ${Free3DS_HEADER})
 if(CHECK_CXX_COMPILER_USED_TOOLS)
 elseif("${CMAKE_CXX_COMPILER_ID}x" STREQUAL "MSVCx")
     # using Visual Studio C++
-    set_property(TARGET "Free3DS" APPEND PROPERTY DEFINE_SYMBOL Free3DS_EXPORTS)
 elseif("${CMAKE_CXX_COMPILER_ID}x" STREQUAL "Intelx")
     # using Intel C++
 else()
