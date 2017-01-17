@@ -30,7 +30,7 @@ matrix:
       script:
         - mkdir -p build && mkdir -p build/trusty && cd build/trusty
         - cmake ../..
-        - make -j4 3ds
+        - make -j4
     
     - os: linux
       services:
@@ -54,4 +54,4 @@ matrix:
         - cd build/darwin
         - cmake ../..
       script:
-        - make -j4 3ds
+        - make -j4

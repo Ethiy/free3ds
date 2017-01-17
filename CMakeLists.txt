@@ -13,13 +13,12 @@ set(PACKAGE_VERSION "${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION}.${CMAKE_PATCH
 
 # Includes
 include(cmake/compilers.cmake)
-include(cmake/dependencies.cmake)
 
 # Free3ds
 file(GLOB_RECURSE Free3DS_SRCS "${Free3DS_SOURCE_DIR}/src/lib/*.c")
 file(GLOB_RECURSE Free3DS_HEADER "${Free3DS_SOURCE_DIR}/src/lib/free3ds.h")
 
-add_library(free3ds SHARED ${Free3DS_SRCS} ${Free3DS_HEADERS})
+add_library(free3ds SHARED ${Free3DS_SRCS} ${Free3DS_HEADER})
 
 if(CHECK_CXX_COMPILER_USED_TOOLS)
 elseif("${CMAKE_CXX_COMPILER_ID}x" STREQUAL "MSVCx")
@@ -34,5 +33,5 @@ endif(CHECK_CXX_COMPILER_USED_TOOLS)
 
 # 3dsdump
 set(3DSDUMP_SRC "${Free3DS_SOURCE_DIR}/src/cli/3dsdump.c")
-add_executable(3dsdump ${3DSDUMP_SRC} ${Free3DS_HEADERS})
-target_link_libraries(3dsdump 3ds)
+add_executable(3dsdump ${3DSDUMP_SRC} ${Free3DS_HEADER})
+target_link_libraries(3dsdump free3ds)

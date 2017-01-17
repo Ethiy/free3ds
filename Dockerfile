@@ -15,4 +15,4 @@ WORKDIR lib3ds/
 RUN mkdir build && mkdir build/xenial
 WORKDIR build/xenial
 RUN cmake ../..
-RUN make -j4 3ds
+RUN make -j4
