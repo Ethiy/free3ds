@@ -1,4 +1,4 @@
-version: 0.0.0_1
+version: 0.0.0_1.{build}
 clone_depth: 3
 
 branches:
