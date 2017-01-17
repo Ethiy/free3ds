@@ -24,14 +24,14 @@
 #include "config.h"
 #endif
 
-#include <lib3ds/file.h>
-#include <lib3ds/camera.h>
-#include <lib3ds/mesh.h>
-#include <lib3ds/node.h>
-#include <lib3ds/material.h>
-#include <lib3ds/matrix.h>
-#include <lib3ds/vector.h>
-#include <lib3ds/light.h>
+#include <lib3ds.h>
+#include <lib3ds.h>
+#include <lib3ds.h>
+#include <lib3ds.h>
+#include <lib3ds.h>
+#include <lib3ds.h>
+#include <lib3ds.h>
+#include <lib3ds.h>
 #include <string.h>
 #include <stdlib.h>
 #include <math.h>

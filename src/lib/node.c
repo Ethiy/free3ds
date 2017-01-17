@@ -19,11 +19,11 @@
  *
  * $Id: node.c,v 1.20 2007/06/20 17:04:08 jeh Exp $
  */
-#include <lib3ds/node.h>
-#include <lib3ds/file.h>
-#include <lib3ds/io.h>
-#include <lib3ds/chunk.h>
-#include <lib3ds/matrix.h>
+#include "node.h"
+#include "file.h"
+#include "io.h"
+#include "chunk.h"
+#include "matrix.h"
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>

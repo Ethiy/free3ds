@@ -19,7 +19,7 @@
  *
  * $Id: io.c,v 1.9 2007/06/20 17:04:08 jeh Exp $
  */
-#include <lib3ds/io.h>
+#include "io.h"
 #include <stdlib.h>
 #include <string.h>
 

@@ -19,7 +19,7 @@
  *
  * $Id: vector.c,v 1.12 2007/06/20 17:04:09 jeh Exp $
  */
-#include <lib3ds/vector.h>
+#include "vector.h"
 #include <math.h>
 
 

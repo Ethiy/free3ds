@@ -19,16 +19,16 @@
  *
  * $Id: file.c,v 1.34 2007/06/20 17:04:08 jeh Exp $
  */
-#include <lib3ds/file.h>
-#include <lib3ds/chunk.h>
-#include <lib3ds/io.h>
-#include <lib3ds/material.h>
-#include <lib3ds/mesh.h>
-#include <lib3ds/camera.h>
-#include <lib3ds/light.h>
-#include <lib3ds/node.h>
-#include <lib3ds/matrix.h>
-#include <lib3ds/vector.h>
+#include "file.h"
+#include "chunk.h"
+#include "io.h"
+#include "material.h"
+#include "mesh.h"
+#include "camera.h"
+#include "light.h"
+#include "node.h"
+#include "matrix.h"
+#include "vector.h"
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>

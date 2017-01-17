@@ -19,9 +19,9 @@
  *
  * $Id: viewport.c,v 1.11 2007/06/20 17:04:09 jeh Exp $
  */
-#include <lib3ds/viewport.h>
-#include <lib3ds/chunk.h>
-#include <lib3ds/io.h>
+#include "viewport.h"
+#include "chunk.h"
+#include "io.h"
 #include <stdlib.h>
 #include <string.h>
 

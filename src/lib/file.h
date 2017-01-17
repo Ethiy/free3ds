@@ -24,16 +24,16 @@
  */
 
 #ifndef INCLUDED_LIB3DS_BACKGROUND_H
-#include <lib3ds/background.h>
+#include "background.h"
 #endif
 #ifndef INCLUDED_LIB3DS_ATMOSPHERE_H
-#include <lib3ds/atmosphere.h>
+#include "atmosphere.h"
 #endif
 #ifndef INCLUDED_LIB3DS_SHADOW_H
-#include <lib3ds/shadow.h>
+#include "shadow.h"
 #endif
 #ifndef INCLUDED_LIB3DS_VIEWPORT_H
-#include <lib3ds/viewport.h>
+#include "viewport.h"
 #endif
 
 #ifdef __cplusplus

@@ -19,7 +19,7 @@
  *
  * $Id: ease.c,v 1.6 2007/06/15 09:33:19 jeh Exp $
  */
-#include <lib3ds/ease.h>
+#include "ease.h"
 
 
 /*!

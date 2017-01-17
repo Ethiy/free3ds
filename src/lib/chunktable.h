@@ -24,7 +24,7 @@
  */
 
 #ifndef INCLUDED_LIB3DS_CHUNK_H
-#include <lib3ds/chunk.h>
+#include "chunk.h"
 #endif
 
 #ifdef __cplusplus

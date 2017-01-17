@@ -19,9 +19,9 @@
  *
  * $Id: atmosphere.c,v 1.12 2007/06/20 17:04:08 jeh Exp $
  */
-#include <lib3ds/atmosphere.h>
-#include <lib3ds/chunk.h>
-#include <lib3ds/io.h>
+#include "atmosphere.h"
+#include "chunk.h"
+#include "io.h"
 
 
 /*!

@@ -19,9 +19,9 @@
  *
  * $Id: chunk.c,v 1.18 2007/06/20 17:04:08 jeh Exp $
  */
-#include <lib3ds/chunk.h>
-#include <lib3ds/io.h>
-#include <lib3ds/chunktable.h>
+#include "chunk.h"
+#include "io.h"
+#include "chunktable.h"
 #include <string.h>
 #include <stdarg.h>
 

@@ -19,9 +19,9 @@
  *
  * $Id: matrix.c,v 1.14 2007/06/20 17:04:08 jeh Exp $
  */
-#include <lib3ds/matrix.h>
-#include <lib3ds/quat.h>
-#include <lib3ds/vector.h>
+#include "matrix.h"
+#include "quat.h"
+#include "vector.h"
 #include <string.h>
 #include <math.h>
 

@@ -19,11 +19,11 @@
  *
  * $Id: mesh.c,v 1.29 2007/06/20 17:04:08 jeh Exp $
  */
-#include <lib3ds/mesh.h>
-#include <lib3ds/io.h>
-#include <lib3ds/chunk.h>
-#include <lib3ds/vector.h>
-#include <lib3ds/matrix.h>
+#include "mesh.h"
+#include "io.h"
+#include "chunk.h"
+#include "vector.h"
+#include "matrix.h"
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>

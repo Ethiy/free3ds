@@ -19,12 +19,12 @@
  *
  * $Id: tracks.c,v 1.20 2007/06/15 09:33:19 jeh Exp $
  */
-#include <lib3ds/tracks.h>
-#include <lib3ds/io.h>
-#include <lib3ds/chunk.h>
-#include <lib3ds/vector.h>
-#include <lib3ds/quat.h>
-#include <lib3ds/node.h>
+#include "tracks.h"
+#include "io.h"
+#include "chunk.h"
+#include "vector.h"
+#include "quat.h"
+#include "node.h"
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>

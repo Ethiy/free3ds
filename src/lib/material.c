@@ -19,9 +19,9 @@
  *
  * $Id: material.c,v 1.24 2007/06/20 17:04:08 jeh Exp $
  */
-#include <lib3ds/material.h>
-#include <lib3ds/chunk.h>
-#include <lib3ds/io.h>
+#include "material.h"
+#include "chunk.h"
+#include "io.h"
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>

@@ -19,9 +19,9 @@
  *
  * $Id: camera.c,v 1.17 2007/06/20 17:04:08 jeh Exp $
  */
-#include <lib3ds/camera.h>
-#include <lib3ds/chunk.h>
-#include <lib3ds/io.h>
+#include "camera.h"
+#include "chunk.h"
+#include "io.h"
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>

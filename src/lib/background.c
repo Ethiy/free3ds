@@ -19,9 +19,9 @@
  *
  * $Id: background.c,v 1.12 2007/06/20 17:04:08 jeh Exp $
  */
-#include <lib3ds/background.h>
-#include <lib3ds/chunk.h>
-#include <lib3ds/io.h>
+#include "background.h"
+#include "chunk.h"
+#include "io.h"
 #include <string.h>
 #include <math.h>
 

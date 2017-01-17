@@ -19,8 +19,8 @@
  *
  * $Id: tcb.c,v 1.11 2007/06/15 09:33:19 jeh Exp $
  */
-#include <lib3ds/tcb.h>
-#include <lib3ds/io.h>
+#include "tcb.h"
+#include "io.h"
 #include <math.h>
 
 

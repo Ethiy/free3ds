@@ -19,7 +19,7 @@
  *
  * $Id: quat.c,v 1.9 2007/06/20 17:04:09 jeh Exp $
  */
-#include <lib3ds/quat.h>
+#include "quat.h"
 #include <math.h>
 
 

@@ -19,9 +19,9 @@
  *
  * $Id: shadow.c,v 1.11 2007/06/20 17:04:09 jeh Exp $
  */
-#include <lib3ds/shadow.h>
-#include <lib3ds/chunk.h>
-#include <lib3ds/io.h>
+#include "shadow.h"
+#include "chunk.h"
+#include "io.h"
 #include <math.h>
 
 
