@@ -4,6 +4,7 @@
 | ------------------------ |:-------------:|
 | Linux Trusty             | [![Build Status](https://travis-ci.org/Ethiy/free3ds.svg?branch=master)](https://travis-ci.org/Ethiy/free3ds)|
 | Linux Xenial             | [![Build Status](https://travis-ci.org/Ethiy/free3ds.svg?branch=master)](https://travis-ci.org/Ethiy/free3ds)|
+| Windows                  | [![Build Status](https://ci.appveyor.com/api/projects/status/qf7xhbjh11s1yvnj?svg=true)]
 | Darwin                   | [![Build Status](https://travis-ci.org/Ethiy/free3ds.svg?branch=master)](https://travis-ci.org/Ethiy/free3ds)|
 
 `Free3ds` is a free toolkit for handling the `3DS` format for 3D model files.
