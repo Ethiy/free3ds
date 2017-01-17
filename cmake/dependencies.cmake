@@ -1,0 +1,7 @@
+set(LIBS "")
+
+# Find OpenGL
+FIND_PACKAGE(OpenGL REQUIRED)
+
+include_directories(SYSTEM ${OPENGL_INCLUDE_DIRS})
+list(APPEND LIBS ${OPENGL_LIBRARIES})
