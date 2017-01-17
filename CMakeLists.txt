@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.4)
+cmake_minimum_required(VERSION 3.2)
 project(Lib3DS C CXX)
 
 set(PACKAGE "Lib3DS")
