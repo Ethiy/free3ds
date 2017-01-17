@@ -11,13 +11,26 @@ branches:
     - master
 
 matrix:
+  fast_finish: true
   include:
     - os: linux
       services:
         - docker
+      dist: trusty
+      compiler: gcc
+      language: cpp
+      sudo: required
+      cache:
+        apt: true
+      before_install:
+        - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
+        - sudo apt-get update -qq
+        - sudo apt-get install build-essential g++-4.8 -y
+        - sudo apt-get install cmake -y
       script:
-        - docker build .
-
+        - mkdir -p build && mkdir -p build/trusty && cd build/trusty
+        - cmake ../..
+        - make -j4 3ds
 
     - os: osx
       osx_image: xcode8
