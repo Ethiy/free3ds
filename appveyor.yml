@@ -8,12 +8,10 @@ branches:
 image: Visual Studio 2015
 os: Visual Studio 2015
 
-platform: x64
-
 before_build:
  - ps: New-Item -ItemType Directory -Path ./build/msvc_14
  - ps: Set-Location ./build/msvc_14
- - cmd: cmake -G""Visual Studio 14 2015"" ../..
+ - cmd: cmake -G"Visual Studio 14 2015" ../..
 
 build:
     project: C:\projects\free3ds\build\msvc_14\free3ds.sln
