@@ -1,9 +1,14 @@
-# Lib3ds
+# Free3ds
 
-Lib3ds is a free toolkit for handling the `3DS` format for 3D model files.
+| Environment              | Status        |
+| ------------------------ |:-------------:|
+| Linux                    | [![Build Status](https://travis-ci.org/Ethiy/free3ds.svg?branch=master)](https://travis-ci.org/Ethiy/free3ds)|
+| Darwin                   | [![Build Status](https://travis-ci.org/Ethiy/free3ds.svg?branch=master)](https://travis-ci.org/Ethiy/free3ds)|
+
+`Free3ds` is a free toolkit for handling the `3DS` format for 3D model files.
 Its main goal is to simplify the creation of 3DS import and export filters.
 
-This is a fork of the original project. The official Lib3ds Homepage is hosted by [sourceforge](http://lib3ds.sourceforge.net). 
+This is a fork of the original `Lib3ds` project. The official Lib3ds Homepage is hosted by [sourceforge](http://lib3ds.sourceforge.net). 
 
 ## License
 

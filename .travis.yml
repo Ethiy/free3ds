@@ -31,6 +31,12 @@ matrix:
         - mkdir -p build && mkdir -p build/trusty && cd build/trusty
         - cmake ../..
         - make -j4 3ds
+    
+    - os: linux
+      services:
+        - docker
+      script:
+        - docker build .
 
     - os: osx
       osx_image: xcode8
