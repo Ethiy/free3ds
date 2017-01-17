@@ -36,7 +36,7 @@ endif(CHECK_CXX_COMPILER_USED_TOOLS)
 set(3DSPLAY_SRC "${Lib3DS_SOURCE_DIR}/src/cli/3dsplay.c")
 
 add_executable(3dsplay ${3DSPLAY_SRC} ${Lib3DS_HEADERS})
-target_link_libraries(3dsplay ${LIBS} 3ds)
+target_link_libraries(3dsplay 3ds ${LIBS})
 
 # 3dsdump
 set(3DSDUMP_SRC "${Lib3DS_SOURCE_DIR}/src/cli/3dsdump.c")
