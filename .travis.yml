@@ -17,6 +17,7 @@ matrix:
       services:
         - docker
       dist: trusty
+      env: LINUX=trusty
       compiler: gcc
       language: cpp
       sudo: required
@@ -35,6 +36,7 @@ matrix:
     - os: linux
       services:
         - docker
+      env: LINUX=xenial
       script:
         - docker build .
 

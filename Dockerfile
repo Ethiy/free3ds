@@ -7,8 +7,6 @@ RUN apt-get install -y \
             g++\
             cmake\
             git
-RUN apt-get install -y \
-            freeglut3-dev
 WORKDIR /home
 RUN git clone https://github.com/Ethiy/lib3ds.git
 WORKDIR lib3ds/
