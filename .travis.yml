@@ -1,0 +1,38 @@
+sudo: required
+dist: trusty
+
+language: cpp
+
+git:
+    depth: 3
+
+branches:
+    only:
+    - master
+
+matrix:
+  include:
+    - os: linux
+      services:
+        - docker
+      script:
+        - docker build .
+
+
+    - os: osx
+      osx_image: xcode8
+      cache:
+        directories:
+          - $HOME/Library/Caches/Homebrew
+          - ./external/Catch/src/Catch-External
+      compiler: clang
+      before_install:
+        - brew update
+        - brew outdated freeglut || brew upgrade freeglut
+        - mkdir build
+        - mkdir build/darwin
+      install:
+        - cd build/darwin
+        - cmake ../..
+      script:
+        - make -j4 3ds
