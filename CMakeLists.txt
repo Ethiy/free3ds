@@ -34,3 +34,8 @@ endif(CHECK_CXX_COMPILER_USED_TOOLS)
 set(3DSDUMP_SRC "${Free3DS_SOURCE_DIR}/src/cli/3dsdump.c")
 add_executable(3dsdump ${3DSDUMP_SRC} ${Free3DS_HEADER})
 target_link_libraries(3dsdump free3ds)
+
+# Install libfree3ds
+install(TARGETS free3ds EXPORT free3ds DESTINATION lib)
+install(EXPORT free3ds DESTINATION lib/cmake)
+
