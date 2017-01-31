@@ -48,8 +48,6 @@ matrix:
           - ./external/Catch/src/Catch-External
       compiler: clang
       before_install:
-        - brew update
-        - brew outdated freeglut || brew upgrade freeglut
         - mkdir build
         - mkdir build/darwin
       install:
