@@ -11,6 +11,6 @@ general:
 compile:
   pre:
     - mkdir -p build && mkdir -p build/trusty
-    - cmake ../..
+    - cd build/trusty && cmake ../..
   override:
     - make -j4
