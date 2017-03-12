@@ -4,13 +4,13 @@ dependencies:
     - sudo apt-get update -qq
     - sudo apt-get install build-essential g++-4.8 -y
     - sudo apt-get install cmake -y
-    - mkdir -p build && mkdir -p build/trusty
 
 general:
   build_dir: build/trusty
 
 compile:
   pre:
+    - mkdir -p build && mkdir -p build/trusty
     - cmake ../..
   override:
     - make -j4
