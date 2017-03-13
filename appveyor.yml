@@ -11,10 +11,10 @@ os: Visual Studio 2015
 environment:
   matrix:
     - Generator: "MSYS2 Makefiles"
+      bash: 'C:\msys64\usr\bin\bash.exe'
     - Generator: "Visual Studio 14 2015"
 
 before_build:
-  - $bash = 'C:\msys64\usr\bin\bash.exe'
   - ps: New-Item -ItemType Directory  -ErrorAction SilentlyContinue -Path ./build/$env:Generator
   - ps: Set-Location ./build/$env:Generator
   - ps: cmake -G$env:Generator ../..
