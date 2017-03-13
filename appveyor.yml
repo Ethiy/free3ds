@@ -21,7 +21,7 @@ before_build:
   - IF %Generator% == "MSYS2 Makefiles" bash@(pacman --noconfirm -Syu pacman)
   - IF %Generator% == "MSYS2 Makefiles" bash@(pacman --noconfirm -S mingw-w64-x86_64-toolchain)
   - IF %Generator% == "MSYS2 Makefiles" bash@(pacman --noconfirm -S libtool make)
-  - cmake $env:Generator ../..
+  - ps: cmake $env:Generator ../..
 
 build_script:
   - ps: |
