@@ -23,9 +23,16 @@ before_build:
   - IF %Generator% == "MSYS2 Makefiles" bash@(pacman --noconfirm -S libtool make)
   - cmake $env:Generator ../..
 
-build:
-  - IF %Generator% == "Visual Studio 14 2015" cmake --build . --target ALL_BUILD
-  - IF %Generator% == "MSYS2 Makefiles" C:\msys64\usr\bin\bash.exe -lc "MSYSTEM=MINGW64 . /etc/profile; cd /C/projects/free3ds/build/MSYS2; /mingw64/bin/cmake --build . --target all"
+build_script:
+  - ps: |
+        if(%Generator% == "Visual Studio 14 2015")
+        {
+          cmake --build . --target ALL_BUILD
+        }
+        else
+        {
+          bash@(MSYSTEM=MINGW64 . /etc/profile; cd /C/projects/free3ds/build/MSYS2; /mingw64/bin/cmake --build . --target all)
+        }
   - $LASTEXITCODE
 
 test: off
