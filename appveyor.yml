@@ -32,7 +32,7 @@ before_build:
        }
 
 build:
-     - ps: |
+ - ps: |
        if($env:generator == "Visual Studio 15")
        {
            cmake --build . --target all
