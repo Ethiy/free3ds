@@ -15,7 +15,7 @@ environment:
 
 before_build:
  - ps: |
-       if($env:generator == "Visual Studio 15")
+       if($env:generator == "Visual Studio 14 2015")
        {
            New-Item -ItemType Directory -Path ./build/msvc_14
            Set-Location ./build/msvc_14
@@ -32,14 +32,6 @@ before_build:
        }
 
 build:
- - ps: |
-       if($env:generator == "Visual Studio 15")
-       {
-           cmake --build . --target all
-       }
-       else
-       {
-           C:\msys64\usr\bin\bash.exe -lc "MSYSTEM=MINGW64 . /etc/profile; cd /C/projects/free3ds/build/MSYS2; /mingw64/bin/cmake --build . --target all"
-       }
-
+  - IF %generator% == "Visual Studio 14 2015" cmake --build . --target all
+  - IF %generator% == "Unix Makefiles" C:\msys64\usr\bin\bash.exe -lc "MSYSTEM=MINGW64 . /etc/profile; cd /C/projects/free3ds/build/MSYS2; /mingw64/bin/cmake --build . --target all"
 test: off
