@@ -11,7 +11,7 @@ os: Visual Studio 2015
 environment:
   matrix:
     - Generator: "MSYS2 Makefiles"
-      bash: 'C:\msys64\usr\bin\bash.exe'
+      bash: 'C:\msys64\usr\bin\bash.exe' -lc
     - Generator: "Visual Studio 14 2015"
 
 before_build:
@@ -20,7 +20,9 @@ before_build:
   - ps: |
         if($env:Generator== "MSYS2 Makefiles")
         {
-          bash@(pacman --noconfirm -Syu pacman; pacman --noconfirm -S mingw-w64-x86_64-toolchain; pacman --noconfirm -S libtool make)
+          bash@(pacman --noconfirm -Syu pacman)
+          bash@(pacman --noconfirm -S mingw-w64-x86_64-toolchain)
+          bash@(pacman --noconfirm -S libtool make)
         }
   - ps: cmake -G'$env:Generator' ../..
 
