@@ -17,11 +17,10 @@ environment:
 before_build:
   - ps: New-Item -ItemType Directory  -ErrorAction SilentlyContinue -Path ./build/$env:Generator
   - ps: Set-Location ./build/$env:Generator
-  - ps: cmake -G$env:Generator ../..
   - IF %Generator% == "MSYS2 Makefiles" bash@(pacman --noconfirm -Syu pacman)
   - IF %Generator% == "MSYS2 Makefiles" bash@(pacman --noconfirm -S mingw-w64-x86_64-toolchain)
   - IF %Generator% == "MSYS2 Makefiles" bash@(pacman --noconfirm -S libtool make)
-  - ps: cmake $env:Generator ../..
+  - ps: cmake -G'$env:Generator' ../..
 
 build_script:
   - ps: |
