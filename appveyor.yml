@@ -1,37 +1,31 @@
-version: 0.0.0_1.{build}
+version: 0.0.0_{build}
 clone_depth: 3
 
 branches:
-    only:
-     - master
+  only:
+    - master
 
 image: Visual Studio 2015
 os: Visual Studio 2015
 
 environment:
   matrix:
-    - generator: "Unix Makefiles"
-    - generator: "Visual Studio 14 2015"
+    - Generator: "MSYS2 Makefiles"
+    - Generator: "Visual Studio 14 2015"
 
 before_build:
- - ps: |
-       if($env:generator == "Visual Studio 14 2015")
-       {
-           New-Item -ItemType Directory -Path ./build/msvc_14
-           Set-Location ./build/msvc_14
-           cmake -G"Visual Studio 14 2015" ../..
-       }
-       else
-       {
-           C:\msys64\usr\bin\bash.exe -lc "pacman --noconfirm -Syu pacman"
-           C:\msys64\usr\bin\bash.exe -lc "pacman --noconfirm -S mingw-w64-x86_64-toolchain"
-           C:\msys64\usr\bin\bash.exe -lc "pacman --noconfirm -S libtool make"
-           C:\msys64\usr\bin\bash.exe -lc "pacman --noconfirm -S mingw-w64-x86_64-cmake"
-           New-Item -ItemType Directory -Path .\build\MSYS2
-           C:\msys64\usr\bin\bash.exe -lc "MSYSTEM=MINGW64 . /etc/profile; cd /C/projects/free3ds/build/MSYS2; /mingw64/bin/cmake -G'Unix Makefiles' ."
-       }
+  - $bash = 'C:\msys64\usr\bin\bash.exe'
+  - ps: New-Item -ItemType Directory  -ErrorAction SilentlyContinue -Path ./build/$env:Generator
+  - ps: Set-Location ./build/$env:Generator
+  - ps: cmake -G$env:Generator ../..
+  - IF %Generator% == "MSYS2 Makefiles" bash@(pacman --noconfirm -Syu pacman)
+  - IF %Generator% == "MSYS2 Makefiles" bash@(pacman --noconfirm -S mingw-w64-x86_64-toolchain)
+  - IF %Generator% == "MSYS2 Makefiles" bash@(pacman --noconfirm -S libtool make)
+  - cmake $env:Generator ../..
 
 build:
-  - IF %generator% == "Visual Studio 14 2015" cmake --build . --target all
-  - IF %generator% == "Unix Makefiles" C:\msys64\usr\bin\bash.exe -lc "MSYSTEM=MINGW64 . /etc/profile; cd /C/projects/free3ds/build/MSYS2; /mingw64/bin/cmake --build . --target all"
+  - IF %Generator% == "Visual Studio 14 2015" cmake --build . --target ALL_BUILD
+  - IF %Generator% == "MSYS2 Makefiles" C:\msys64\usr\bin\bash.exe -lc "MSYSTEM=MINGW64 . /etc/profile; cd /C/projects/free3ds/build/MSYS2; /mingw64/bin/cmake --build . --target all"
+  - $LASTEXITCODE
+
 test: off
